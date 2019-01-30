@@ -122,3 +122,24 @@ function done(output) {
 function evaluateCmd(userInput) {
 module.exports.commandLibrary = commandLibrary;
 module.exports.evaluateCmd = evaluateCmd;
+
+
+6. Reverse String
+Given a string, reverse the order of characters in each word within a sentence while maintaining the original word order and whitespace and return the string. To improve your problem-solving experience, use the suggested functions to solve the problem.
+
+
+function reverseString(inputString) {
+let letters = [];
+let reversedLetters = [];
+
+for (let i in inputString) {
+  letters.push(inputString[i]);
+}
+
+for (let j = letters.length; j>=0; j--) {
+  reversedLetters.push(letters[j]);
+}
+return reversedLetters.join("");
+}
+
+console.log(reverseString("I'm learning to program algorithms!"));
